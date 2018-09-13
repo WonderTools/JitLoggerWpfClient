@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="JitLoggerWpfClient.JitLoggerAddingUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JitLoggerWpfClient"
+             xmlns:core="clr-namespace:JitLoggerWpfClient.Core;assembly=JitLoggerWpfClient.Core"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance core:JitLoggerAddingViewModel}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Add New Jit Log Source" Style="{StaticResource SecondaryHeadingStyle}"/>
+        <Grid Grid.Row="1" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="500"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Jit Logger Name" Style="{StaticResource HintTextStyle}" Grid.Row="0" Grid.Column="0"/>
+            <TextBlock Text="Jit Logger Url" Style="{StaticResource HintTextStyle}" Grid.Row="1" Grid.Column="0"/>
+            <TextBlock Text="Refresh Rate (s)" Style="{StaticResource HintTextStyle}" Grid.Row="2" Grid.Column="0"/>
+            <TextBox Text="{Binding Name}" IsReadOnly="True" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"/>
+            <TextBox Text="{Binding Url}" IsReadOnly="True" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch"/>
+            <TextBox Text="{Binding RefreshPeriodInSeconds}" IsReadOnly="True" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"/>
+            <Button Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right" Style="{StaticResource ActionButtonStyle}">
+                <Image Source="Resources/plus.ico" />
+            </Button>
+        </Grid>
+    </Grid>
+</UserControl>

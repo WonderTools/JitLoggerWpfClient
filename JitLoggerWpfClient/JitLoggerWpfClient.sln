@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JitLoggerWpfClient", "JitLoggerWpfClient\JitLoggerWpfClient.csproj", "{D6BDB25F-5EC2-43B2-B0C3-D55C79491B1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JitLoggerWpfClient.Core", "JitLoggerWpfClient.Core\JitLoggerWpfClient.Core.csproj", "{BCC6A517-36EC-4795-9A48-152256A505D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6BDB25F-5EC2-43B2-B0C3-D55C79491B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6BDB25F-5EC2-43B2-B0C3-D55C79491B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6BDB25F-5EC2-43B2-B0C3-D55C79491B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6BDB25F-5EC2-43B2-B0C3-D55C79491B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC6A517-36EC-4795-9A48-152256A505D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC6A517-36EC-4795-9A48-152256A505D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC6A517-36EC-4795-9A48-152256A505D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC6A517-36EC-4795-9A48-152256A505D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BE373E3-733E-4C57-A3B3-FC9B7C2676C9}
+	EndGlobalSection
+EndGlobal

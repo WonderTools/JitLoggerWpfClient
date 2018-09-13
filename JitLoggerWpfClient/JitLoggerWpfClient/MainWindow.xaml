@@ -1,0 +1,34 @@
+﻿<Window x:Class="JitLoggerWpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JitLoggerWpfClient"
+        xmlns:core="clr-namespace:JitLoggerWpfClient.Core;assembly=JitLoggerWpfClient.Core"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance core:MainViewModel}"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="VisibilityConverter"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="False" IsEnabled="{Binding IsContentMenuEnabled}">
+            <TextBlock Text="Jit Logger" Style="{StaticResource HeadingStyle}" DockPanel.Dock="Left"/>
+            <Button DockPanel.Dock="Right" Style="{StaticResource ContentMenuButtonStyle}" Command="{Binding ShowSourceCommand}">
+                <Image Source="Resources/Settings.ico"></Image>
+            </Button>
+        </DockPanel>
+        <local:LogAnalyserUserControl Grid.Row="1"/>
+        <Grid Margin="60" Grid.Row="1">
+            <Border BorderThickness="2" 
+                    BorderBrush="Black"
+                    Visibility="{Binding IsSourcesVisible, Converter={StaticResource VisibilityConverter}}">
+                <local:JitLoggerSourceUserControl DataContext="{Binding SourceViewModel}"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
